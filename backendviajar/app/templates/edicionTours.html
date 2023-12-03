@@ -1,0 +1,44 @@
+{% extends "./base.html" %}
+
+{% block title %} Gestión de Tours {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Edición de Tours</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarTours/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="txtCodigo" name="txtCodigo" value="{{tours.codigo}}" class="form-control" placeholder="Código"
+                            minlength="6" maxlength="6" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtCircuito" name="txtCircuito" value="{{tours.circuito}}" class="form-control" placeholder="Circuito"
+                        maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtDescripcion" name="txtDescripcion" value="{{tours.descripcion}}" class="form-control" placeholder="Descripción"
+                        maxlength="50" required>                           value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtAereo" name="txtAereo" value="{{tours.aereo}}" class="form-control" placeholder="Aereo"
+                        maxlength="50" required>                           value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtTraslados" name="txtTraslados" value="{{tours.traslados}}" class="form-control" placeholder="Traslados"
+                        maxlength="50" required>                           value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtComidas" name="txtComidas" value="{{tours.comidas}}" class="form-control" placeholder="Comidas"
+                        maxlength="50" required>                           value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
