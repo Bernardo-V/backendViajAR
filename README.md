@@ -1,5 +1,5 @@
 ![img](https://i.postimg.cc/FRXKcL88/comienza.gif)
-# ProyectoIntegrador Python FullStack
+# Proyecto Integrador Python Full Stack
 
 ## Descripción del proyecto 🚀
 Este proyecto corresponde al Proyecto Integrador Python Full Stack. Correspondiente al programa "Codo a Codo".
